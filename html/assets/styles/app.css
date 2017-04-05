@@ -1,0 +1,574 @@
+/*
+	HTML5 Reset :: reset.css
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: http://ericmeyer.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+
+header,
+section,
+footer {
+  clear: both;
+}
+
+/* we can use default ULs & OLs with bullets */
+
+ul {
+  margin: 15px 0 15px 30px;
+  list-style: outside disc;
+}
+
+ol {
+  margin: 15px 0 15px 30px;
+  list-style: outside decimal;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td,
+td img {
+  vertical-align: top;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  outline: none;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  margin: 1px 4px 4px 0;
+}
+
+input[type=text],
+input[type=password] {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+/* make buttons play nice in IE */
+
+button,
+input[type=submit] {
+  overflow: visible;
+  width: auto;
+}
+
+.ie7 input[type=submit],
+.ie7 input[type=reset],
+.ie7 input[type=button] {
+  -webkit-filter: chroma(color=#000);
+  filter: chroma(color=#000);
+}
+
+/* hand cursor on clickable elements */
+
+input[type=button],
+input[type=submit],
+button {
+  cursor: pointer;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  cursor: help;
+  border-bottom: 1px dotted #000;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+hr {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+/* standardize any monospaced elements */
+
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, sans-serif;
+}
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+
+/* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
+
+/* ::-moz-selection{ background:#fcd700; color:#fff; text-shadow:none; } */
+
+/* ::selection { background:#fcd700; color:#fff; text-shadow:none; } */
+
+/* j.mp/webkit-tap-highlight-color */
+
+/* a:link {-webkit-tap-highlight-color:#fcd700;} */
+
+/* scale images in IE7 more attractively */
+
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* let's clear some floats */
+
+.clear {
+  font-size: 0;
+  line-height: 0;
+  clear: both;
+  height: 0;
+}
+
+.b-header {
+  height: 150px;
+  padding: 40px 0 20px 0;
+  text-align: center;
+  background-color: #fee11b;
+}
+
+.b-title {
+  font-size: 4em;
+  padding: 0 10px;
+  color: #333;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+:active,
+:focus,
+:hover {
+  outline: 0;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+}
+
+/* force a vertical scrollbar to prevent a jumpy page */
+
+html {
+  overflow-y: scroll;
+}
+
+html {
+  font-size: 10px;
+  line-height: 10px;
+  min-width: 320px;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: inherit;
+  font-weight: normal;
+  font-style: normal;
+  line-height: inherit;
+  min-width: 320px;
+  min-height: 100%;
+  color: #333;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.no-touchevents a:hover {
+  text-decoration: none;
+}
+
+p {
+  margin: 0 0 15px 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+p:empty {
+  display: none;
+}
+
+input {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.text-up {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.svg-store {
+  display: none;
+  overflow: hidden;
+  height: 0;
+}
+
+.layout {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.container {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 320px;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.container:after {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  clear: both;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  content: '';
+}
+
+.b-content {
+  width: 940px;
+  margin: -40px auto 20px auto;
+}
+
+.b-subtitle {
+  font-size: 3em;
+  padding: 40px 10px;
+  text-align: center;
+  color: #6c6e70;
+  background-color: #f7f9f8;
+}
+
+.custom-table-row {
+  font-size: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.custom-table-row:nth-child(2n) {
+  background-color: #f7f9f8;
+}
+
+.custom-table__head-item,
+.custom-table__item {
+  font-size: 16px;
+  line-height: 1;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.custom-table__head-item.b-shedule__school,
+.custom-table__item.b-shedule__school {
+  width: 20%;
+}
+
+.custom-table__head-item.b-shedule__lecture-topic,
+.custom-table__item.b-shedule__lecture-topic {
+  width: 30%;
+}
+
+.custom-table__head-item.b-shedule__lecturer,
+.custom-table__head-item.b-shedule__date-and-time,
+.custom-table__item.b-shedule__lecturer,
+.custom-table__item.b-shedule__date-and-time {
+  width: 25%;
+}
+
+.custom-table__head {
+  font-weight: 700;
+}
+
+@media (min-width: 1001px) {
+  .b-content {
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+  }
+}
+
+@media (max-width: 1000px) {
+  .b-header {
+    height: auto;
+    padding: 30px 0 20px 0;
+  }
+
+  .b-title {
+    font-size: 3em;
+  }
+
+  .b-content {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .b-subtitle {
+    font-size: 2.5em;
+    padding: 30px 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .b-title {
+    font-size: 2.2em;
+  }
+
+  .b-content {
+    margin-top: 0;
+  }
+
+  .b-subtitle {
+    font-size: 1.75em;
+    padding: 20px 10px;
+  }
+
+  .custom-table__head {
+    display: none;
+  }
+
+  .custom-table-row {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .custom-table__item {
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+
+  .custom-table__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .custom-table__item:before {
+    font-weight: 700;
+    margin-right: 10px;
+    content: attr(data-row-name);
+  }
+
+  .custom-table__item.b-shedule__school,
+  .custom-table__item.b-shedule__lecture-topic,
+  .custom-table__item.b-shedule__lecturer,
+  .custom-table__item.b-shedule__date-and-time {
+    width: 100%;
+  }
+}

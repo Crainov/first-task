@@ -1,0 +1,43 @@
+extends ../layout/layout-default
+
+block vars
+	- var bodyClass = 'layout-home';
+
+block head
+	- var pageTitle = 'Мобилизация';
+
+block content
+
+	.b-content
+		h2.b-subtitle
+			| Расписание лекций проекта «Мобилизация»
+		.b-shedule.custom-table
+			.custom-table-row.custom-table__head
+				.b-shedule__school.custom-table__head-item
+					| Школа
+				.b-shedule__lecture-topic.custom-table__head-item
+					| Тема лекции
+				.b-shedule__lecturer.custom-table__head-item
+					| Имя лектора
+				.b-shedule__date-and-time.custom-table__head-item
+					| Дата и время проведения
+			-
+				var sheduleData = [
+						{school: 'ШРИ', topic: 'Лекция 1. Адаптивная вёрстка', lecturerName: 'Дмитрий Душкин', dateAndTime: '20 октября 2016, 19:00' },
+						{school: 'ШРИ', topic: 'Лекция 2. Работа с сенсорным пользовательским вводом', lecturerName: 'Дмитрий Душкин', dateAndTime: '29 октября 2016, 19:00' },
+						{school: 'ШРИ', topic: 'Лекция 3. Мультимедиа: возможности браузера', lecturerName: 'Максим Васильев', dateAndTime: '1 ноября 2016, 19:00' },
+						{school: 'ШМР', topic: 'Лекция 1. Java Blitz (Часть 1)', lecturerName: 'Эдуард Мацуков', dateAndTime: '20 октября 2016, 19:00' },
+						{school: 'ШМР', topic: 'Лекция 2. Git & Workflow', lecturerName: 'Дмитрий Складнов', dateAndTime: '27 октября 2016, 20:00' },
+						{school: 'ШМР', topic: 'Лекция 6. ViewGroup', lecturerName: 'Алексей Щербинин', dateAndTime: '10 ноября 2016, 21:00' },
+						{school: 'ШМР', topic: 'Лекция 7. Background', lecturerName: 'Алексей Макаров', dateAndTime: '15 ноября 2016, 18:00' },
+						{school: 'ШМД', topic: 'Лекция 1. Идея, исследование, концепт (Часть 1)', lecturerName: 'Антон Тен', dateAndTime: '15 октября 2016, 19:00' },
+						{school: 'ШМД', topic: 'Лекция 2. Идея, исследование, концепт (Часть 2)', lecturerName: 'Антон Тен', dateAndTime: '29 октября 2016, 20:00' },
+						{school: 'ШМД', topic: 'Лекция 3. Особенности проектирования мобильных интерфейсов', lecturerName: 'Васюнин Николай', dateAndTime: '16 ноября 2016, 21:30' },
+						{school: 'ШМД', topic: 'Лекция 4. Продукт и платформа', lecturerName: 'Сергей Калабин', dateAndTime: '23 ноября 2016, 20:30' },
+				]
+			each lecture in sheduleData
+				.custom-table-row
+					.custom-table__item.b-shedule__school(data-row-name="Школа:")= lecture.school
+					.custom-table__item.b-shedule__lecture-topic(data-row-name="Тема лекции:")= lecture.topic
+					.custom-table__item.b-shedule__lecturer(data-row-name="Имя лектора:")= lecture.lecturerName
+					.custom-table__item.b-shedule__date-and-time(data-row-name="Дата и время проведения:")= lecture.dateAndTime
